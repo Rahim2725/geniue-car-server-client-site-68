@@ -23,10 +23,10 @@ const AddService = () => {
         <div className='text-center w-50 mx-auto mt-3'>
             <h2>Please Add service</h2>
             <form className='d-flex flex-column ' onSubmit={handleSubmit(onSubmit)}>
-                <input className='mb-3' placeholder='Name' {...register("name", { required: true, maxLength: 20 })} />
-                <textarea className='mb-3' placeholder='Description' {...register("description",)} />
-                <input className='mb-3' placeholder='Price' type="number" {...register("price")} />
-                <input className='mb-3' placeholder='Photo URL' type="text" {...register("img")} />
+                <input className='mb-3' placeholder='Name' required {...register("name", { required: true, maxLength: 20 })} />
+                <textarea className='mb-3' placeholder='Description' required {...register("description",)} />
+                <input className='mb-3' placeholder='Price' type="number" required {...register("price")} />
+                <input className='mb-3' placeholder='Photo URL' type="text" required {...register("img")} />
                 <input className='mb-3' type="submit" />
             </form>
         </div>
