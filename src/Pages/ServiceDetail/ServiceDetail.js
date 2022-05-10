@@ -20,7 +20,7 @@ const ServiceDetail = () => {
                 <div className='mb-5'>
                     <img src={img} alt="" />
                 </div>
-                <Link to="/checkout">
+                <Link to={`/checkout/${serviceId}`}>
                     <button className='btn btn-primary'>Proceed Checkout</button>
                 </Link>
             </div>
