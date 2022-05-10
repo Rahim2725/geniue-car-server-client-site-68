@@ -20,14 +20,14 @@ const Checkout = () => {
             address: event.target.address.value,
             phone: event.target.phone.value,
         }
-        fetch('http://localhost:5000/order', {
+        fetch('https://protected-lowlands-54831.herokuapp.com/order', {
             method: "POST",
             headers: {
                 'content-type': "application/json"
             },
             body: JSON.stringify(order)
         })
-            .then(res => res.json())
+          /*   .then(res => res.json())
             .then(data => {
                 const order = data.insertedId;
                 if (order) {
@@ -35,9 +35,9 @@ const Checkout = () => {
                     event.target.reset();
                 }
 
-            })
+            }) */
 
-        /*   axios.post('http://localhost:5000/order', order)
+          axios.post('https://protected-lowlands-54831.herokuapp.com/order', order)
           .then(response => {
               console.log(response);
               const {data} = response;
@@ -45,7 +45,7 @@ const Checkout = () => {
                   toast('Your Order is  Booked!!')
                   event.target.reset();
               }
-          }) */
+          })
     }
     return (
         <div className='w-50 mt-5 mx-auto text-center'>

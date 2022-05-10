@@ -7,7 +7,7 @@ const MangeServices = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Aer You Sure?')
         if(proceed){
-            fetch(`http://localhost:5000/service/${id}`, {
+            fetch(`https://protected-lowlands-54831.herokuapp.com/service/${id}`, {
                 method: 'DELETE',
             })
             .then(res => res.json())
